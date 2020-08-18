@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="450.0" style="-fx-background-color: #A0522D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AddLibraryController">
+    <children>
+        <AnchorPane layoutY="83.0" prefHeight="360.0" prefWidth="450.0" style="-fx-background-color: #DEB887;">
+            <children>
+                <Button fx:id="add_library_button" layoutX="83.0" layoutY="279.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="282.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add library">
+                    <font>
+                        <Font name="Baskerville Old Face" size="26.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="tf_lib_name" layoutX="84.0" layoutY="30.0" prefHeight="34.0" prefWidth="281.0" promptText="Library name">
+                    <font>
+                        <Font name="Baskerville Old Face" size="17.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_lib_email" layoutX="83.0" layoutY="152.0" prefHeight="34.0" prefWidth="282.0" promptText="Email">
+                    <font>
+                        <Font name="Baskerville Old Face" size="17.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_lib_address" layoutX="83.0" layoutY="92.0" prefHeight="34.0" prefWidth="282.0" promptText="Address">
+                    <font>
+                        <Font name="Baskerville Old Face" size="17.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_lib_phone" layoutX="83.0" layoutY="207.0" prefHeight="34.0" prefWidth="282.0" promptText="Phone">
+                    <font>
+                        <Font name="Baskerville Old Face" size="17.0" />
+                    </font>
+                </TextField>
+            </children></AnchorPane>
+        <Label layoutX="142.0" prefHeight="72.0" prefWidth="166.0" text="Library">
+            <font>
+                <Font name="Baskerville Old Face" size="56.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

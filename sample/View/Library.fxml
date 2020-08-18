@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="687.0" style="-fx-background-color: #A0522D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.LibraryStartController">
+   <children>
+      <Label layoutX="260.0" layoutY="-8.0" prefHeight="72.0" prefWidth="166.0" text="Library">
+         <font>
+            <Font name="Baskerville Old Face" size="56.0" />
+         </font>
+      </Label>
+      <TabPane layoutY="64.0" prefHeight="564.0" prefWidth="685.0" style="-fx-background-color: #DEB887;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="Books" fx:id="tab_book" text="Books">
+            <content>
+              <AnchorPane fx:id="tab_books" minHeight="0.0" minWidth="0.0" prefHeight="534.0" prefWidth="620.0">
+                     <children>
+                        <Button fx:id="but_add_book" layoutX="307.0" layoutY="457.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                           <font>
+                              <Font name="Baskerville Old Face" size="22.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="textfield_title_book" layoutX="19.0" layoutY="400.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the title of book" style="-fx-background-color: #FFFFFF;">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font></TextField>
+                        <Button fx:id="but_search_books" layoutX="611.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font></Button>
+                        <Button fx:id="but_show_book" layoutX="476.0" layoutY="480.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="195.0" style="-fx-background-color: #D2691E;" text="Show books &quot;on hands&quot;">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font></Button>
+                        <TableView fx:id="table_books" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn id="id_book" fx:id="tc_number" prefWidth="49.60003739595413" resizable="false" text="№" />
+                            <TableColumn id="tittle_book" fx:id="tc_title" prefWidth="164.79998397827148" resizable="false" text="TItle" />
+                              <TableColumn id="author_book" fx:id="tc_author" prefWidth="67.20002746582031" text="Author" />
+                              <TableColumn id="type_book" fx:id="tc_tp" prefWidth="75.0" text="Type book" />
+                              <TableColumn id="quantity_book" fx:id="tc_quantity" minWidth="0.79998779296875" prefWidth="73.60003662109375" resizable="false" text="Quantity" />
+                              <TableColumn id="ph_book" fx:id="tc_ph" prefWidth="159.99993896484375" resizable="false" text="Publishing house" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_tp_book" text="Type book">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_type_book" layoutX="307.0" layoutY="457.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                         <TextField fx:id="textfield_type_book" layoutX="19.0" layoutY="402.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the type of book" style="-fx-background-color: #FFFFFF;">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="15.0" />
+                             </font></TextField>
+                         <Button fx:id="but_search_typebook" layoutX="611.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="15.0" />
+                             </font></Button>
+                        <TableView fx:id="table_type_book" layoutX="4.0" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_typebook" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="tc_typebook" prefWidth="236.80006408691406" resizable="false" text="Type book" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_ex_of_books" text="Example of book">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_example_book" layoutX="307.0" layoutY="436.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                        <TableView fx:id="table_example_of_book" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_ebook" prefWidth="45.60000687837601" text="№" />
+                            <TableColumn fx:id="tc_date_of_issue" prefWidth="162.39995956420898" text="Date of issue" />
+                              <TableColumn fx:id="tc_lib_ebook" prefWidth="132.80006408691406" text="Library" />
+                              <TableColumn fx:id="tc_title_ebook" prefWidth="210.39996337890625" text="Title" />
+                              <TableColumn fx:id="tc_reader_ebook" prefWidth="135.99993896484375" text="Reader" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_readers" text="Readers">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_reader" layoutX="307.0" layoutY="434.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                         <Button fx:id="but_show_debtors" layoutX="431.0" layoutY="480.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="234.0" style="-fx-background-color: #D2691E;" text="Show debtors">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="15.0" />
+                             </font></Button>
+                        <TableView fx:id="table_readers" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_reader" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="tc_status_reader" prefWidth="193.6000518798828" text="Status" />
+                              <TableColumn fx:id="tc_numberticket_reader" prefWidth="156.0" text="Number of ticket" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_rtickets" text="Tickets of readers">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="490.0">
+                     <children>
+                         <Button fx:id="but_add_reader_ticket" layoutX="307.0" layoutY="436.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                        <TableView fx:id="table_reader_ticket" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_readerticket" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="tc_reader_rticket" prefWidth="233.59999084472656" text="Reader" />
+                              <TableColumn fx:id="tc_date_of_birth" prefWidth="200.800048828125" text="Date of birth" />
+                              <TableColumn fx:id="tc_typeoccup_rticket" prefWidth="176.7999267578125" text="Type of occupation" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_occup" text="Occupation">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_occupation" layoutX="307.0" layoutY="437.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                        <TableView fx:id="table_occupation" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_occupation" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="tc_type_of_occupation" prefWidth="192.0000762939453" text="Type of occupation" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_libs" text="Libraries">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_library" layoutX="307.0" layoutY="440.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                        <TableView fx:id="table_libraries" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_library" prefWidth="42.39996415376663" text="№" />
+                            <TableColumn fx:id="tc_library" prefWidth="147.99999618530273" text="Library" />
+                              <TableColumn fx:id="tc_address_lib" prefWidth="137.59999084472656" text="Address" />
+                              <TableColumn fx:id="tc_email_lib" prefWidth="217.60003662109375" text="Email" />
+                              <TableColumn fx:id="tc_phone_lib" prefWidth="147.20001220703125" text="Phone" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_ph" text="Publishing houses">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_ph" layoutX="307.0" layoutY="439.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                        <TableView fx:id="table_ph" layoutX="-1.0" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_ph" prefWidth="39.19998246431351" text="№" />
+                            <TableColumn fx:id="tc_name_ph" prefWidth="168.79998397827148" text="Publishing house" />
+                              <TableColumn fx:id="tc_address_ph" prefWidth="159.20008850097656" text="Address" />
+                              <TableColumn fx:id="tc_email_ph" prefWidth="175.99993896484375" text="Email" />
+                              <TableColumn fx:id="tc_phone_ph" prefWidth="145.60003662109375" text="Phone" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tab_authors" text="Authors">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                         <Button fx:id="but_add_author" layoutX="307.0" layoutY="445.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="22.0" />
+                             </font>
+                         </Button>
+                         <TextField fx:id="textfield_author_name" layoutX="14.0" layoutY="407.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the author name" style="-fx-background-color: #FFFFFF;">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="15.0" />
+                             </font></TextField>
+                         <Button fx:id="but_search_authors" layoutX="611.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                             <font>
+                                 <Font name="Baskerville Old Face" size="15.0" />
+                             </font></Button>
+                        <TableView fx:id="table_authors" layoutX="-1.0" prefHeight="389.0" prefWidth="686.0">
+                          <columns>
+                            <TableColumn fx:id="tc_id_author" prefWidth="75.0" text="№" />
+                            <TableColumn fx:id="tc_name_author" prefWidth="284.00001525878906" text="Author" />
+                              <TableColumn fx:id="tc_country_author" prefWidth="158.39996337890625" text="Country" />
+                              <TableColumn fx:id="tc_years_of_life" prefWidth="165.60003662109375" text="Years of life" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+        </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
