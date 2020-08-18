@@ -21,7 +21,7 @@ public class DatabaseHandler extends Configs {
     public void addBook (String Title, int Quantity, int TypeBookId,
                          int PHId, int AuthorId ) {
         String insert ="INSERT INTO book(Title, Quantity, TypeBookId, PHId, AuthorId ) VALUES(?,?,?,?,?)";
-        //можно и нужно использовать константы из класса Const, см. видео 11
+
         try {
             PreparedStatement prst = getDbConnection().prepareStatement(insert);
             prst.setString(1,Title);
@@ -34,6 +34,34 @@ public class DatabaseHandler extends Configs {
             System.out.println(e);
         }
 
+    }
+
+    public void deleteBook(String answer_delete_book) {
+        int ans_id = Integer.valueOf(answer_delete_book);
+        String delete ="DELETE FROM book where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void updateBook(String Title, int Quantity, int TypeBookId, int PHId, int AuthorId, int ans_id_book) {
+        String update = "UPDATE book SET Title = ? , Quantity = ? , TypeBookId = ? , PHId = ? , AuthorId = ? WHERE book.id = ? ";
+
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,Title);
+            prst.setInt(2,Quantity);
+            prst.setInt(3,TypeBookId);
+            prst.setInt(4,PHId);
+            prst.setInt(5,AuthorId);
+            prst.setInt(6,ans_id_book);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 
     public ObservableList<Book> ViewRecordBook(){
@@ -75,6 +103,31 @@ public class DatabaseHandler extends Configs {
         try {
             PreparedStatement prst = getDbConnection().prepareStatement(insert);
             prst.setString(1,TypeBOOK);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+    }
+
+    public void deleteTypeBook(String answer_delete_tp) {
+        int ans_id = Integer.valueOf(answer_delete_tp);
+        String delete ="DELETE FROM type_book where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+
+    public void updateTypeBook(String TypeBOOK, Integer answer_update_tp) {
+        String update = "UPDATE type_book SET typebook = ? WHERE type_book.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,TypeBOOK);
+            prst.setInt(2,answer_update_tp);
             prst.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
@@ -125,7 +178,33 @@ public class DatabaseHandler extends Configs {
         }
 
     }
+    public void deleteExampleBook(String answer_delete_exbook) {
+        int ans_id = Integer.valueOf(answer_delete_exbook);
+        String delete ="DELETE FROM example_of_book where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 
+    public void updateExampleBook(Boolean Flagg, Date DataOfIssue, int LibId,
+                                  int BookId, int ReaderId , int ans_id_exbook) {
+        String update="UPDATE example_of_book SET flagg = ? , dataofissue = ? , libid = ?, bookid = ? , readerid = ?  WHERE example_of_book.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setBoolean(1,Flagg);
+            prst.setDate(2,DataOfIssue);
+            prst.setInt(3,LibId);
+            prst.setInt(4,BookId);
+            prst.setInt(5,ReaderId);
+            prst.setInt(6,ans_id_exbook);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 
     public ObservableList<ExampleOfBook> ViewRecordExBook(){
         ResultSet resSet = null;
@@ -171,6 +250,28 @@ public class DatabaseHandler extends Configs {
             System.out.println(e);
         }
     }
+    public void deleteReader(String answer_delete_reader) {
+        int ans_id = Integer.valueOf(answer_delete_reader);
+        String delete ="DELETE FROM reader where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    public void updateReader(Boolean status, Integer rticketid, int ans_id_reader) {
+        String update ="UPDATE reader SET Status = ? , RTicketId = ?  WHERE reader.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setBoolean(1,status);
+            prst.setInt(2,rticketid);
+            prst.setInt(3,ans_id_reader);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 
     public ObservableList<Reader> ViewRecordReader(){
         ResultSet resSet = null;
@@ -206,6 +307,29 @@ public class DatabaseHandler extends Configs {
             prst.setString(1,FullNameReader);
             prst.setDate(2,DataOfBirth);
             prst.setInt(3,OccupId);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    public void deleteReaderTicket(String answer_delete_rticket) {
+        int ans_id = Integer.valueOf(answer_delete_rticket);
+        String delete ="DELETE FROM reader_ticket where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    public void updateReaderTicket(String FullNameReader, Date DataOfBirth, Integer OccupId, Integer ans_id_rticket) {
+        String update ="UPDATE reader_ticket SET FullNameReader = ? , DateOfBirth = ? , OccupId = ? WHERE reader_ticket.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,FullNameReader);
+            prst.setDate(2,DataOfBirth);
+            prst.setInt(3,OccupId);
+            prst.setInt(4,ans_id_rticket);
             prst.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
@@ -410,5 +534,7 @@ public class DatabaseHandler extends Configs {
         }
         return result;
     }
+
+
 
 }
