@@ -29,6 +29,12 @@ public class AddReaderTicketController {
     private TextField tf_occup_id;
 
     @FXML
+    private TextField tf_id_rticket;
+
+    @FXML
+    private Button update_rticket_button;
+
+    @FXML
     void initialize() {
         add_rticket_button.setOnAction(event ->{
 
@@ -42,6 +48,22 @@ public class AddReaderTicketController {
                 Date ans_date = Date.valueOf(answer_dateofbirth);
                 int ans_occup_id = Integer.valueOf(answer_type_occup);
                 dbHandler.addReaderTicket(answer_fname_reader,ans_date,ans_occup_id);
+            } else System.out.println("Пустое поле ответа!");
+        });
+        update_rticket_button.setOnAction(event->{
+            DatabaseHandler dbHandler = new DatabaseHandler();
+
+            String answer_id_rticket = tf_id_rticket.getText().trim();
+            String answer_fname_reader = tf_fname_reader.getText().trim();
+            String answer_dateofbirth = tf_date_of_birth.getText().trim();
+            String answer_type_occup = tf_occup_id.getText().trim();
+
+            if((!answer_fname_reader.equals("")) && (!answer_dateofbirth.equals(""))&&(!answer_type_occup.equals(""))
+                    && (!answer_id_rticket.equals(""))){
+                Date ans_date = Date.valueOf(answer_dateofbirth);
+                int ans_occup_id = Integer.valueOf(answer_type_occup);
+                int ans_id_rticket = Integer.valueOf(answer_id_rticket);
+                dbHandler.updateReaderTicket(answer_fname_reader,ans_date,ans_occup_id,ans_id_rticket);
             } else System.out.println("Пустое поле ответа!");
         });
 

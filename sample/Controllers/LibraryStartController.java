@@ -21,6 +21,8 @@ import javafx.stage.Stage;
 import sample.DatabaseHandler;
 import sample.Models.*;
 
+import javax.swing.text.html.ImageView;
+
 public class LibraryStartController {
 
     @FXML
@@ -66,6 +68,15 @@ public class LibraryStartController {
     private TableColumn<Book, String> tc_ph;
 
     @FXML
+    private Button but_delete_book;
+
+    @FXML
+    private Button but_update_book;
+
+    @FXML
+    private TextField textfield_id_book;
+
+    @FXML
     private Tab tab_tp_book;
 
     @FXML
@@ -85,6 +96,15 @@ public class LibraryStartController {
 
     @FXML
     private TableColumn<TypeBook, String> tc_typebook;
+
+    @FXML
+    private TextField textfield_idTP_delete;
+
+    @FXML
+    private Button but_delete_type_book;
+
+    @FXML
+    private Button but_update_type_book;
 
 
     @FXML
@@ -112,6 +132,15 @@ public class LibraryStartController {
     private TableColumn<ExampleOfBook, String> tc_reader_ebook;
 
     @FXML
+    private TextField textField_id_exbook_delete;
+
+    @FXML
+    private Button but_delete_example_book;
+
+    @FXML
+    private Button but_update_example_book;
+
+    @FXML
     private Tab tab_readers;
 
     @FXML
@@ -131,6 +160,15 @@ public class LibraryStartController {
 
     @FXML
     private TableColumn<Reader, Integer> tc_numberticket_reader;
+
+    @FXML
+    private TextField textfield_id_reader;
+
+    @FXML
+    private Button but_delete_reader;
+
+    @FXML
+    private Button but_update_reader;
 
     @FXML
     private Tab tab_rtickets;
@@ -153,6 +191,14 @@ public class LibraryStartController {
     @FXML
     private TableColumn<ReaderTicket, String> tc_typeoccup_rticket;
 
+    @FXML
+    private TextField textfield_id_rticket_delete;
+
+    @FXML
+    private Button but_delete_reader_ticket;
+
+    @FXML
+    private Button but_update_reader_ticket;
 
     @FXML
     private Tab tab_occup;
@@ -397,6 +443,116 @@ public class LibraryStartController {
         but_add_author.setOnAction(event->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/View/AddAuthorWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_delete_book.setOnAction(event ->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_book= textfield_id_book.getText().trim();
+            DBhandler.deleteBook(answer_delete_book);
+        });
+
+        but_delete_type_book.setOnAction(event ->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_TP= textfield_idTP_delete.getText().trim();
+            DBhandler.deleteTypeBook(answer_delete_TP);
+        });
+
+        but_delete_example_book.setOnAction(event ->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_exbook= textField_id_exbook_delete.getText().trim();
+            DBhandler.deleteExampleBook(answer_delete_exbook);
+        });
+
+        but_delete_reader.setOnAction(event->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_reader= textfield_id_reader.getText().trim();
+            DBhandler.deleteReader(answer_delete_reader);
+        });
+
+        but_delete_reader_ticket.setOnAction(event->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_rticket= textfield_id_rticket_delete.getText().trim();
+            DBhandler.deleteReaderTicket(answer_delete_rticket);
+        });
+
+        but_update_book.setOnAction(event ->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddBookWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_update_type_book.setOnAction(event ->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddTypeBookWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_update_example_book.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddExampleBookWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_update_reader.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddReaderWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_update_reader_ticket.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddReaderTicketWindow.fxml"));
 
             try {
                 loader.load();

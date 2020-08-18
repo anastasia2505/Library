@@ -35,6 +35,12 @@ public class AddExampleBookController {
     private TextField tf_reader_ebook;
 
     @FXML
+    private TextField tf_id_ebook;
+
+    @FXML
+    private Button update_ebook_button;
+
+    @FXML
     void initialize() {
 
         add_ebook_button.setOnAction(event ->{
@@ -55,7 +61,30 @@ public class AddExampleBookController {
                 int ansReader = Integer.valueOf(answer_reader);
                 dbHandler.addExampleBook(ansFlagg, ansDate, ansLib, ansBook, ansReader);
             } else System.out.println("Пустое поле ответа!");
+
         });
 
+        update_ebook_button.setOnAction( event ->{
+            DatabaseHandler dbHandler = new DatabaseHandler();
+
+            String answer_id_exbook = tf_id_ebook.getText().trim();
+
+            String answer_flagg = tf_flagg_ebook.getText().trim();
+            String answer_date = tf_date_of_issue.getText();
+            String answer_lib = tf_lib_ebook.getText().trim();
+            String answer_book = tf_book_ebook.getText().trim();
+            String answer_reader= tf_reader_ebook.getText().trim();
+
+            if((!answer_flagg.equals("")) && (!answer_date.equals(""))&&(!answer_lib.equals(""))
+                    && (!answer_book.equals("")) && (!answer_reader.equals(""))&& (!answer_id_exbook.equals(""))){
+                Boolean ansFlagg = Boolean.valueOf(answer_flagg);
+                Date ansDate = Date.valueOf(answer_date);
+                int ansLib = Integer.valueOf(answer_lib);
+                int ansBook = Integer.valueOf(answer_book);
+                int ansReader = Integer.valueOf(answer_reader);
+                int ans_id_exbook = Integer.valueOf(answer_id_exbook);
+                dbHandler.updateExampleBook(ansFlagg, ansDate, ansLib, ansBook, ansReader,ans_id_exbook);
+            } else System.out.println("Пустое поле ответа!");
+        });
     }
 }
