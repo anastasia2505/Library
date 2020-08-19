@@ -376,6 +376,27 @@ public class DatabaseHandler extends Configs {
         }
 
     }
+    public void deleteOccupation(String answer_delete_occupation) {
+        int ans_id = Integer.valueOf(answer_delete_occupation);
+        String delete ="DELETE FROM occupation where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    public void updateOccupation(String TypeOfOccupation, int ans_id_occupation) {
+        String update ="UPDATE occupation SET TypeOfOccupation = ? WHERE occupation.id = ? ";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,TypeOfOccupation);
+            prst.setInt(2,ans_id_occupation);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 
     public ObservableList<Occupation> ViewRecordOccupation(){
         ResultSet resSet = null;
@@ -416,7 +437,32 @@ public class DatabaseHandler extends Configs {
         } catch (SQLException e) {
             System.out.println(e);
         }
+    }
 
+    public void deleteLibrary(String answer_delete_lib) {
+        int ans_id = Integer.valueOf(answer_delete_lib);
+        String delete ="DELETE FROM my_library where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void updateLibrary(String LibName, String LibAddress, String LibEmail, String LibPhone, int ans_id_lib) {
+        String update ="UPDATE my_library SET LibName = ? , LibAddress = ? , LibEmail = ?, LibPhone = ?  WHERE my_library.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,LibName);
+            prst.setString(2,LibAddress);
+            prst.setString(3,LibEmail);
+            prst.setString(4,LibPhone);
+            prst.setInt(5,ans_id_lib);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 
     public ObservableList<Library> ViewRecordLibrary(){
@@ -457,6 +503,32 @@ public class DatabaseHandler extends Configs {
             prst.setString(2,PHAddress);
             prst.setString(3,PHEmail);
             prst.setString(4,PHPhone);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+
+    public void deletePublishingHouse(String answer_delete_ph) {
+        int ans_id = Integer.valueOf(answer_delete_ph);
+        String delete ="DELETE FROM publishing_house where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+
+    }
+    public void updatePublishingHouse(String PHName, String PHAddress, String PHEmail, String PHPhone, int ans_id_ph) {
+        String update ="UPDATE publishing_house SET PHName = ? , PHdAddress = ? , PHEmail = ? , PHPhone = ?  WHERE publishing_house.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,PHName);
+            prst.setString(2,PHAddress);
+            prst.setString(3,PHEmail);
+            prst.setString(4,PHPhone);
+            prst.setInt(5,ans_id_ph);
             prst.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
@@ -505,6 +577,29 @@ public class DatabaseHandler extends Configs {
             System.out.println(e);
         }
     }
+    public void deleteAuthor(String answer_delete_author) {
+        int ans_id = Integer.valueOf(answer_delete_author);
+        String delete ="DELETE FROM author where id=" + ans_id;
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(delete);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
+    public void updateAuthor(String FullName, String Country, String YearsOfLife, int ans_id) {
+        String update ="UPDATE author SET FullName = ? , Country = ? , YearsOfLife = ? WHERE author.id = ?";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(update);
+            prst.setString(1,FullName);
+            prst.setString(2,Country);
+            prst.setString(3,YearsOfLife);
+            prst.setInt(4,ans_id);
+            prst.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+    }
 
     public ObservableList<Author> ViewRecordAuthor(){
         ResultSet resSet = null;
@@ -534,7 +629,5 @@ public class DatabaseHandler extends Configs {
         }
         return result;
     }
-
-
 
 }

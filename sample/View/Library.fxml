@@ -225,9 +225,9 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                         <Button fx:id="but_add_occupation" layoutX="307.0" layoutY="437.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                         <Button fx:id="but_add_occupation" layoutX="265.0" layoutY="482.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
                              <font>
-                                 <Font name="Baskerville Old Face" size="22.0" />
+                                 <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
                         <TableView fx:id="table_occupation" prefHeight="389.0" prefWidth="686.0">
@@ -236,6 +236,21 @@
                             <TableColumn fx:id="tc_type_of_occupation" prefWidth="192.0000762939453" text="Type of occupation" />
                           </columns>
                         </TableView>
+                        <TextField fx:id="textfield_id_occupation" layoutX="22.0" layoutY="483.0" prefHeight="2.0" prefWidth="156.0" promptText="Enter id for delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="but_delete_occupation" layoutX="187.0" layoutY="482.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_update_occupation" layoutX="343.0" layoutY="482.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -243,9 +258,9 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                         <Button fx:id="but_add_library" layoutX="307.0" layoutY="440.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                         <Button fx:id="but_add_library" layoutX="277.0" layoutY="483.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
                              <font>
-                                 <Font name="Baskerville Old Face" size="22.0" />
+                                 <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
                         <TableView fx:id="table_libraries" prefHeight="389.0" prefWidth="686.0">
@@ -257,6 +272,21 @@
                               <TableColumn fx:id="tc_phone_lib" prefWidth="147.20001220703125" text="Phone" />
                           </columns>
                         </TableView>
+                        <TextField fx:id="textfield_id_lib" layoutX="21.0" layoutY="484.0" prefHeight="2.0" prefWidth="156.0" promptText="Enter id for delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="but_delete_lib" layoutX="194.0" layoutY="483.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_update_lib" layoutX="357.0" layoutY="483.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -264,9 +294,9 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                         <Button fx:id="but_add_ph" layoutX="307.0" layoutY="439.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                         <Button fx:id="but_add_ph" layoutX="258.0" layoutY="484.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
                              <font>
-                                 <Font name="Baskerville Old Face" size="22.0" />
+                                 <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
                         <TableView fx:id="table_ph" layoutX="-1.0" prefHeight="389.0" prefWidth="686.0">
@@ -278,6 +308,21 @@
                               <TableColumn fx:id="tc_phone_ph" prefWidth="145.60003662109375" text="Phone" />
                           </columns>
                         </TableView>
+                        <TextField fx:id="textfield_id_ph" layoutX="14.0" layoutY="485.0" prefHeight="2.0" prefWidth="156.0" promptText="Enter id for delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="but_delete_ph" layoutX="180.0" layoutY="484.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_update_ph" layoutX="336.0" layoutY="484.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -285,9 +330,9 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                         <Button fx:id="but_add_author" layoutX="307.0" layoutY="445.0" mnemonicParsing="false" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
+                         <Button fx:id="but_add_author" layoutX="261.0" layoutY="490.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add">
                              <font>
-                                 <Font name="Baskerville Old Face" size="22.0" />
+                                 <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
                          <TextField fx:id="textfield_author_name" layoutX="14.0" layoutY="407.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the author name" style="-fx-background-color: #FFFFFF;">
@@ -306,6 +351,21 @@
                               <TableColumn fx:id="tc_years_of_life" prefWidth="165.60003662109375" text="Years of life" />
                           </columns>
                         </TableView>
+                        <TextField fx:id="textfield_id_author" layoutX="14.0" layoutY="491.0" prefHeight="2.0" prefWidth="156.0" promptText="Enter id for delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="but_delete_author" layoutX="184.0" layoutY="490.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Delete">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_update_author" layoutX="342.0" layoutY="490.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
+                           <font>
+                              <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>

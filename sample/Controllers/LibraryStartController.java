@@ -216,6 +216,15 @@ public class LibraryStartController {
     private TableColumn<Occupation, String> tc_type_of_occupation;
 
     @FXML
+    private TextField textfield_id_occupation;
+
+    @FXML
+    private Button but_delete_occupation;
+
+    @FXML
+    private Button but_update_occupation;
+
+    @FXML
     private Tab tab_libs;
 
     @FXML
@@ -240,6 +249,15 @@ public class LibraryStartController {
     private TableColumn<Library, String> tc_phone_lib;
 
     @FXML
+    private TextField textfield_id_lib;
+
+    @FXML
+    private Button but_delete_lib;
+
+    @FXML
+    private Button but_update_lib;
+
+    @FXML
     private Tab tab_ph;
 
     @FXML
@@ -262,6 +280,15 @@ public class LibraryStartController {
 
     @FXML
     private TableColumn<PublishingHouse, String> tc_phone_ph;
+
+    @FXML
+    private TextField textfield_id_ph;
+
+    @FXML
+    private Button but_delete_ph;
+
+    @FXML
+    private Button but_update_ph;
 
     @FXML
     private Tab tab_authors;
@@ -289,6 +316,15 @@ public class LibraryStartController {
 
     @FXML
     private TableColumn<Author, String> tc_years_of_life;
+
+    @FXML
+    private TextField textfield_id_author;
+
+    @FXML
+    private Button but_delete_author;
+
+    @FXML
+    private Button but_update_author;
 
     public ObservableList<Book> listbook = FXCollections.observableArrayList();
     public ObservableList<TypeBook> listtypebook = FXCollections.observableArrayList();
@@ -480,10 +516,34 @@ public class LibraryStartController {
             DBhandler.deleteReader(answer_delete_reader);
         });
 
+        but_delete_occupation.setOnAction(event->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_occupation = textfield_id_occupation.getText().trim();
+            DBhandler.deleteOccupation(answer_delete_occupation);
+        });
+
         but_delete_reader_ticket.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_rticket= textfield_id_rticket_delete.getText().trim();
             DBhandler.deleteReaderTicket(answer_delete_rticket);
+        });
+
+        but_delete_lib.setOnAction(event->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_lib = textfield_id_lib.getText().trim();
+            DBhandler.deleteLibrary(answer_delete_lib);
+        });
+
+        but_delete_ph.setOnAction(event->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_ph = textfield_id_ph.getText().trim();
+            DBhandler.deletePublishingHouse(answer_delete_ph);
+        });
+
+        but_delete_author.setOnAction(event->{
+            DatabaseHandler DBhandler = new DatabaseHandler();
+            String answer_delete_author = textfield_id_author.getText().trim();
+            DBhandler.deleteAuthor(answer_delete_author);
         });
 
         but_update_book.setOnAction(event ->{
@@ -553,6 +613,67 @@ public class LibraryStartController {
         but_update_reader_ticket.setOnAction(event->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/View/AddReaderTicketWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+        but_update_occupation.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddOccupationWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_update_lib.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddLibraryWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+        but_update_ph.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddPublishingHouseWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+        but_update_author.setOnAction(evnt->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/AddAuthorWindow.fxml"));
 
             try {
                 loader.load();

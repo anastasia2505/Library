@@ -24,12 +24,28 @@ public class AddOccupationController {
     private TextField tf_type_occupation;
 
     @FXML
+    private TextField tf_id_occupation;
+
+    @FXML
+    private Button update_typeoccup_button;
+
+    @FXML
     void initialize() {
         add_typeoccup_button.setOnAction(event ->{
             DatabaseHandler dbHandler = new DatabaseHandler();
             String answer_type_occupation = tf_type_occupation.getText().trim();
             if((!answer_type_occupation.equals(""))){
                 dbHandler.addOccupation(answer_type_occupation);
+            } else System.out.println("Пустое поле ответа!");
+        });
+
+        update_typeoccup_button.setOnAction(event->{
+            DatabaseHandler dbHandler = new DatabaseHandler();
+            String answer_id_occupation = tf_id_occupation.getText().trim();
+            String answer_type_occupation = tf_type_occupation.getText().trim();
+            if((!answer_type_occupation.equals(""))&&(!answer_id_occupation.equals(""))){
+                int ans_id_occupation = Integer.valueOf(answer_id_occupation);
+                dbHandler.updateOccupation(answer_type_occupation,ans_id_occupation);
             } else System.out.println("Пустое поле ответа!");
         });
 
