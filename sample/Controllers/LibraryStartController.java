@@ -77,6 +77,9 @@ public class LibraryStartController {
     private TextField textfield_id_book;
 
     @FXML
+    private Button but_refresh_books;
+
+    @FXML
     private Tab tab_tp_book;
 
     @FXML
@@ -105,6 +108,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_update_type_book;
+
+    @FXML
+    private Button but_refresh_typebook;
 
 
     @FXML
@@ -141,6 +147,9 @@ public class LibraryStartController {
     private Button but_update_example_book;
 
     @FXML
+    private Button but_refresh_exbook;
+
+    @FXML
     private Tab tab_readers;
 
     @FXML
@@ -169,6 +178,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_update_reader;
+
+    @FXML
+    private Button but_refresh_readers;
 
     @FXML
     private Tab tab_rtickets;
@@ -201,6 +213,9 @@ public class LibraryStartController {
     private Button but_update_reader_ticket;
 
     @FXML
+    private Button but_refresh_rticket;
+
+    @FXML
     private Tab tab_occup;
 
     @FXML
@@ -223,6 +238,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_update_occupation;
+
+    @FXML
+    private Button but_refresh_occup;
 
     @FXML
     private Tab tab_libs;
@@ -258,6 +276,9 @@ public class LibraryStartController {
     private Button but_update_lib;
 
     @FXML
+    private Button but_refresh_lib;
+
+    @FXML
     private Tab tab_ph;
 
     @FXML
@@ -289,6 +310,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_update_ph;
+
+    @FXML
+    private Button but_refresh_ph;
 
     @FXML
     private Tab tab_authors;
@@ -326,6 +350,9 @@ public class LibraryStartController {
     @FXML
     private Button but_update_author;
 
+    @FXML
+    private Button but_refresh_authors;
+
     public ObservableList<Book> listbook = FXCollections.observableArrayList();
     public ObservableList<TypeBook> listtypebook = FXCollections.observableArrayList();
     public ObservableList<ExampleOfBook> listexamplebook = FXCollections.observableArrayList();
@@ -347,6 +374,34 @@ public class LibraryStartController {
         showTableLibrary();
         showTablePH();
         showTableAuthor();
+
+        but_refresh_books.setOnAction(event->{
+            showTableBook();
+        });
+        but_refresh_typebook.setOnAction(event->{
+            showTableTypeBook();
+        });
+        but_refresh_exbook.setOnAction(event->{
+            showTableExampleBook();
+        });
+        but_refresh_readers.setOnAction(event->{
+            showTableReader();
+        });
+        but_refresh_rticket.setOnAction(event->{
+            showTableReaderTicket();
+        });
+        but_refresh_occup.setOnAction(event->{
+            showTableOccupation();
+        });
+        but_refresh_lib.setOnAction(event->{
+            showTableLibrary();
+        });
+        but_refresh_ph.setOnAction(event->{
+            showTablePH();
+        });
+        but_refresh_authors.setOnAction(event->{
+            showTableAuthor();
+        });
 
         but_add_book.setOnAction(event -> {
 

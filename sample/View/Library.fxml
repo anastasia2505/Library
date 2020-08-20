@@ -28,11 +28,11 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
-                        <TextField fx:id="textfield_title_book" layoutX="19.0" layoutY="400.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the title of book" style="-fx-background-color: #FFFFFF;">
+                        <TextField fx:id="textfield_title_book" layoutX="19.0" layoutY="400.0" prefHeight="28.0" prefWidth="517.0" promptText="Enter the title of book" style="-fx-background-color: #FFFFFF;">
                            <font>
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font></TextField>
-                        <Button fx:id="but_search_books" layoutX="611.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                        <Button fx:id="but_search_books" layoutX="543.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
                            <font>
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font></Button>
@@ -68,6 +68,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </TextField>
+                        <Button fx:id="but_refresh_books" layoutX="610.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -80,11 +85,11 @@
                                  <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
-                         <TextField fx:id="textfield_type_book" layoutX="19.0" layoutY="402.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the type of book" style="-fx-background-color: #FFFFFF;">
+                         <TextField fx:id="textfield_type_book" layoutX="7.0" layoutY="402.0" prefHeight="28.0" prefWidth="521.0" promptText="Enter the type of book" style="-fx-background-color: #FFFFFF;">
                              <font>
                                  <Font name="Baskerville Old Face" size="15.0" />
                              </font></TextField>
-                         <Button fx:id="but_search_typebook" layoutX="611.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                         <Button fx:id="but_search_typebook" layoutX="540.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
                              <font>
                                  <Font name="Baskerville Old Face" size="15.0" />
                              </font></Button>
@@ -107,6 +112,11 @@
                         <Button fx:id="but_update_type_book" layoutX="334.0" layoutY="488.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
                            <font>
                               <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_refresh_typebook" layoutX="611.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
                      </children></AnchorPane>
@@ -143,6 +153,11 @@
                         <Button fx:id="but_update_example_book" layoutX="343.0" layoutY="487.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
                            <font>
                               <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_refresh_exbook" layoutX="605.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
                      </children></AnchorPane>
@@ -183,6 +198,11 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
+                        <Button fx:id="but_refresh_readers" layoutX="605.0" layoutY="398.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -218,6 +238,11 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
+                        <Button fx:id="but_refresh_rticket" layoutX="597.0" layoutY="399.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -249,6 +274,11 @@
                         <Button fx:id="but_update_occupation" layoutX="343.0" layoutY="482.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
                            <font>
                               <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_refresh_occup" layoutX="601.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
                      </children></AnchorPane>
@@ -287,6 +317,11 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
+                        <Button fx:id="but_refresh_lib" layoutX="605.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -323,6 +358,11 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
+                        <Button fx:id="but_refresh_ph" layoutX="601.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -335,11 +375,11 @@
                                  <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
-                         <TextField fx:id="textfield_author_name" layoutX="14.0" layoutY="407.0" prefHeight="28.0" prefWidth="576.0" promptText="Enter the author name" style="-fx-background-color: #FFFFFF;">
+                         <TextField fx:id="textfield_author_name" layoutX="6.0" layoutY="393.0" prefHeight="28.0" prefWidth="517.0" promptText="Enter the author name" style="-fx-background-color: #FFFFFF;">
                              <font>
                                  <Font name="Baskerville Old Face" size="15.0" />
                              </font></TextField>
-                         <Button fx:id="but_search_authors" layoutX="611.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                         <Button fx:id="but_search_authors" layoutX="535.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
                              <font>
                                  <Font name="Baskerville Old Face" size="15.0" />
                              </font></Button>
@@ -364,6 +404,11 @@
                         <Button fx:id="but_update_author" layoutX="342.0" layoutY="490.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update">
                            <font>
                               <Font name="Baskerville Old Face" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_refresh_authors" layoutX="611.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
                      </children></AnchorPane>
