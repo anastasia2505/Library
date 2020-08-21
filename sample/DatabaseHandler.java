@@ -630,4 +630,152 @@ public class DatabaseHandler extends Configs {
         return result;
     }
 
+    public ObservableList<ShowDebtors> ShowDebtors() {
+        ResultSet resSet = null;
+
+        String select = "SELECT status, rticketid, fullnamereader FROM reader\n" +
+                "JOIN reader_ticket ON (reader_ticket.id = rticketid)\n" +
+                "WHERE status = 'true';";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(select);
+            resSet = prst.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ObservableList<ShowDebtors> result = FXCollections.observableArrayList();
+        try {
+            while(resSet.next()) {
+                ShowDebtors show_deb = new ShowDebtors(
+                        resSet.getInt(2),
+                        resSet.getString(3)
+                );
+
+                result.add(show_deb);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public ObservableList<ShowBookOnHands> ShowBookOnHands() {
+        ResultSet resSet = null;
+
+        String select = "SELECT flagg, example_of_book.id, title, dataofissue, libname, fullnamereader FROM example_of_book\n" +
+                "JOIN my_library ON (my_library.id = libid) \n" +
+                "JOIN book ON (book.id = bookid)\n" +
+                "JOIN reader ON (reader.id = example_of_book.readerid )\n" +
+                "JOIN reader_ticket ON (reader.rticketid = reader_ticket.id )\n" +
+                "WHERE flagg = 'false';";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(select);
+            resSet = prst.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ObservableList<ShowBookOnHands> result = FXCollections.observableArrayList();
+        try {
+            while(resSet.next()) {
+                ShowBookOnHands show_books = new ShowBookOnHands(
+                        resSet.getInt(2),
+                        resSet.getString(3),
+                        resSet.getString(4),
+                        resSet.getString(5),
+                        resSet.getString(6)
+                );
+
+                result.add(show_books);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public ObservableList<ShowBookByTitle> SearchBook(String answer_search_book) {
+        ResultSet resSet = null;
+
+        String select ="SELECT  example_of_book.id, title, fullname, libname FROM example_of_book\n" +
+                "JOIN my_library ON (my_library.id = libid) \n" +
+                "JOIN book ON (book.id = bookid)\n" +
+                "JOIN author ON (author.id = book.authorid)\n" +
+                "WHERE title = '"+answer_search_book+"';";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(select);
+            resSet = prst.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ObservableList<ShowBookByTitle> result = FXCollections.observableArrayList();
+        try {
+            while(resSet.next()) {
+                ShowBookByTitle show_books = new ShowBookByTitle(
+                        resSet.getInt(1),
+                        resSet.getString(2),
+                        resSet.getString(3),
+                        resSet.getString(4)
+                );
+
+                result.add(show_books);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+
+    }
+
+    public ObservableList<ShowBookByType> FindByType (String answer_type) {
+        ResultSet resSet = null;
+
+        String select ="SELECT title, typebook FROM book\n" +
+                "JOIN type_book ON (type_book.id = typebookid)\n" +
+                "WHERE typebook = '"+answer_type+"';";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(select);
+            resSet = prst.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ObservableList<ShowBookByType> result = FXCollections.observableArrayList();
+        try {
+            while(resSet.next()) {
+                ShowBookByType show_books = new ShowBookByType(
+                        resSet.getString(1),
+                        resSet.getString(2)
+                );
+                result.add(show_books);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+    public ObservableList<ShowBookByAuthor> FindByAuthor (String answer_author) {
+        ResultSet resSet = null;
+
+        String select ="SELECT title, fullname FROM book\n" +
+                "JOIN author ON (author.id = book.authorid)\n" +
+                "WHERE fullname = '"+answer_author+"';";
+        try {
+            PreparedStatement prst = getDbConnection().prepareStatement(select);
+            resSet = prst.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        ObservableList<ShowBookByAuthor> result = FXCollections.observableArrayList();
+        try {
+            while(resSet.next()) {
+                ShowBookByAuthor show_books = new ShowBookByAuthor(
+                        resSet.getString(1),
+                        resSet.getString(2)
+                );
+                result.add(show_books);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+
+    }
 }

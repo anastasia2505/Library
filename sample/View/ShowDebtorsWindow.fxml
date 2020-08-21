@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="647.0" style="-fx-background-color: #A0522D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ShowDebtorsController">
+    <children>
+        <AnchorPane layoutY="83.0" prefHeight="371.0" prefWidth="647.0" style="-fx-background-color: #DEB887;">
+         <children>
+            <TableView fx:id="table_debtors" layoutY="-2.0" prefHeight="377.0" prefWidth="647.0">
+              <columns>
+                <TableColumn fx:id="tablecolumn_id_debtors" prefWidth="75.0" text="№" />
+                  <TableColumn fx:id="tablecolumn_name_debtors" prefWidth="489.5999755859375" text="Name reader" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+        <Label layoutX="240.0" prefHeight="72.0" prefWidth="166.0" text="Library">
+            <font>
+                <Font name="Baskerville Old Face" size="56.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

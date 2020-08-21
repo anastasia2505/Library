@@ -28,18 +28,6 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
-                        <TextField fx:id="textfield_title_book" layoutX="19.0" layoutY="400.0" prefHeight="28.0" prefWidth="517.0" promptText="Enter the title of book" style="-fx-background-color: #FFFFFF;">
-                           <font>
-                              <Font name="Baskerville Old Face" size="15.0" />
-                           </font></TextField>
-                        <Button fx:id="but_search_books" layoutX="543.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
-                           <font>
-                              <Font name="Baskerville Old Face" size="15.0" />
-                           </font></Button>
-                        <Button fx:id="but_show_book" layoutX="476.0" layoutY="492.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="195.0" style="-fx-background-color: #D2691E;" text="Show books &quot;on hands&quot;">
-                           <font>
-                              <Font name="Baskerville Old Face" size="15.0" />
-                           </font></Button>
                         <TableView fx:id="table_books" prefHeight="389.0" prefWidth="686.0">
                           <columns>
                             <TableColumn id="id_book" fx:id="tc_number" prefWidth="49.60003739595413" resizable="false" text="№" />
@@ -85,11 +73,7 @@
                                  <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
-                         <TextField fx:id="textfield_type_book" layoutX="7.0" layoutY="402.0" prefHeight="28.0" prefWidth="521.0" promptText="Enter the type of book" style="-fx-background-color: #FFFFFF;">
-                             <font>
-                                 <Font name="Baskerville Old Face" size="15.0" />
-                             </font></TextField>
-                         <Button fx:id="but_search_typebook" layoutX="540.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                         <Button fx:id="but_search_typebook" layoutX="487.0" layoutY="402.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="114.0" style="-fx-background-color: #D2691E;" text="Search by type">
                              <font>
                                  <Font name="Baskerville Old Face" size="15.0" />
                              </font></Button>
@@ -156,6 +140,16 @@
                            </font>
                         </Button>
                         <Button fx:id="but_refresh_exbook" layoutX="605.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_show_books" layoutX="513.0" layoutY="488.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Show books &quot;on hands&quot;">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="but_search_books" layoutX="562.0" layoutY="445.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="110.0" style="-fx-background-color: #D2691E;" text="Search by title">
                            <font>
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
@@ -238,7 +232,7 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="but_refresh_rticket" layoutX="597.0" layoutY="399.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                        <Button fx:id="but_refresh_rticket" layoutX="605.0" layoutY="399.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
                            <font>
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
@@ -276,7 +270,7 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="but_refresh_occup" layoutX="601.0" layoutY="405.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                        <Button fx:id="but_refresh_occup" layoutX="605.0" layoutY="399.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
                            <font>
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
@@ -375,11 +369,7 @@
                                  <Font name="Baskerville Old Face" size="14.0" />
                              </font>
                          </Button>
-                         <TextField fx:id="textfield_author_name" layoutX="6.0" layoutY="393.0" prefHeight="28.0" prefWidth="517.0" promptText="Enter the author name" style="-fx-background-color: #FFFFFF;">
-                             <font>
-                                 <Font name="Baskerville Old Face" size="15.0" />
-                             </font></TextField>
-                         <Button fx:id="but_search_authors" layoutX="535.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search">
+                         <Button fx:id="but_search_authors" layoutX="477.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Search by author">
                              <font>
                                  <Font name="Baskerville Old Face" size="15.0" />
                              </font></Button>
@@ -406,7 +396,7 @@
                               <Font name="Baskerville Old Face" size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="but_refresh_authors" layoutX="611.0" layoutY="393.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
+                        <Button fx:id="but_refresh_authors" layoutX="605.0" layoutY="400.0" mnemonicParsing="false" style="-fx-background-color: #D2691E;" text="Refresh">
                            <font>
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>

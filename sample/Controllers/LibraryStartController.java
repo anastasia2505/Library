@@ -21,7 +21,6 @@ import javafx.stage.Stage;
 import sample.DatabaseHandler;
 import sample.Models.*;
 
-import javax.swing.text.html.ImageView;
 
 public class LibraryStartController {
 
@@ -36,15 +35,6 @@ public class LibraryStartController {
 
     @FXML
     private Button but_add_book;
-
-    @FXML
-    private TextField textfield_title_book;
-
-    @FXML
-    private Button but_search_books;
-
-    @FXML
-    private Button but_show_book;
 
     @FXML
     private TableView<Book> table_books;
@@ -86,9 +76,6 @@ public class LibraryStartController {
     private Button but_add_type_book;
 
     @FXML
-    private TextField textfield_type_book;
-
-    @FXML
     private Button but_search_typebook;
 
     @FXML
@@ -112,12 +99,17 @@ public class LibraryStartController {
     @FXML
     private Button but_refresh_typebook;
 
-
     @FXML
     private Tab tab_ex_of_books;
 
     @FXML
     private Button but_add_example_book;
+
+    @FXML
+    private Button but_search_books;
+
+    @FXML
+    private Button but_show_books;
 
     @FXML
     private TableView<ExampleOfBook> table_example_of_book;
@@ -321,9 +313,6 @@ public class LibraryStartController {
     private Button but_add_author;
 
     @FXML
-    private TextField textfield_author_name;
-
-    @FXML
     private Button but_search_authors;
 
     @FXML
@@ -362,6 +351,8 @@ public class LibraryStartController {
     public ObservableList<Library> listlibrary = FXCollections.observableArrayList();
     public ObservableList<PublishingHouse> listph = FXCollections.observableArrayList();
     public ObservableList<Author> listauthor = FXCollections.observableArrayList();
+
+    public ObservableList<ExampleOfBook> list_bytitle = FXCollections.observableArrayList();
 
     @FXML
     void initialize() throws SQLException {
@@ -729,6 +720,84 @@ public class LibraryStartController {
         but_update_author.setOnAction(evnt->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/View/AddAuthorWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_show_debtors.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/ShowDebtorsWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+        but_show_books.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/ShowBookOnHandsWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_search_books.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/ShowBookByTitleWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+
+        but_search_typebook.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/ShowBookByTypeWindow.fxml"));
+
+            try {
+                loader.load();
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        });
+        but_search_authors.setOnAction(event->{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/sample/View/ShowBookByAuthorWindow.fxml"));
 
             try {
                 loader.load();

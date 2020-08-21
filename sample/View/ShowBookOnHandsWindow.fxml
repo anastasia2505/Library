@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="647.0" style="-fx-background-color: #A0522D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ShowBookOnHandsController">
+    <children>
+        <AnchorPane layoutY="83.0" prefHeight="371.0" prefWidth="647.0" style="-fx-background-color: #DEB887;">
+            <children>
+                <TableView fx:id="table_book_on_hands" layoutY="-2.0" prefHeight="377.0" prefWidth="647.0">
+                    <columns>
+                        <TableColumn fx:id="tablecolumn_id_book" prefWidth="39.20001220703125" text="№" />
+                        <TableColumn fx:id="tablecolumn_date_book" prefWidth="125.5999755859375" text="Date" />
+                  <TableColumn fx:id="tablecolumn_lib_book" prefWidth="127.20001220703125" text="Library" />
+                  <TableColumn fx:id="tablecolumn_title_book" prefWidth="151.99993896484375" text="Title" />
+                  <TableColumn fx:id="tablecolumn_reader_book" prefWidth="203.2000732421875" text="Reader" />
+                    </columns>
+                </TableView>
+            </children></AnchorPane>
+        <Label layoutX="240.0" prefHeight="72.0" prefWidth="166.0" text="Library">
+            <font>
+                <Font name="Baskerville Old Face" size="56.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
