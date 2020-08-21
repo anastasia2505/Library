@@ -352,10 +352,9 @@ public class LibraryStartController {
     public ObservableList<PublishingHouse> listph = FXCollections.observableArrayList();
     public ObservableList<Author> listauthor = FXCollections.observableArrayList();
 
-    public ObservableList<ExampleOfBook> list_bytitle = FXCollections.observableArrayList();
-
     @FXML
     void initialize() throws SQLException {
+        //заполнение данными всех таблиц
         showTableBook();
         showTableTypeBook();
         showTableExampleBook();
@@ -366,6 +365,7 @@ public class LibraryStartController {
         showTablePH();
         showTableAuthor();
 
+        //кнопки обновления таблиц
         but_refresh_books.setOnAction(event->{
             showTableBook();
         });
@@ -394,8 +394,8 @@ public class LibraryStartController {
             showTableAuthor();
         });
 
+        //кнопки добавления новых записей в таблицы
         but_add_book.setOnAction(event -> {
-
            FXMLLoader loader = new FXMLLoader();
            loader.setLocation(getClass().getResource("/sample/View/AddBookWindow.fxml"));
 
@@ -442,7 +442,6 @@ public class LibraryStartController {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
-
         but_add_reader.setOnAction(event ->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/View/AddReaderWindow.fxml"));
@@ -538,6 +537,7 @@ public class LibraryStartController {
             stage.showAndWait();
         });
 
+        //кнопки удаления записей из таблиц
         but_delete_book.setOnAction(event ->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_book= textfield_id_book.getText().trim();
@@ -592,6 +592,7 @@ public class LibraryStartController {
             DBhandler.deleteAuthor(answer_delete_author);
         });
 
+        // кнопки изменения записей в таблицах
         but_update_book.setOnAction(event ->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/View/AddBookWindow.fxml"));
@@ -733,6 +734,7 @@ public class LibraryStartController {
             stage.showAndWait();
         });
 
+        // кнопки дополнительных запросов
         but_show_debtors.setOnAction(event->{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/sample/View/ShowDebtorsWindow.fxml"));

@@ -23,9 +23,7 @@ public class Book {
 
     }
 
-    public int getId() {
-        return id_book.get();
-    }
+    public int getId() { return id_book.get(); }
 
     public SimpleIntegerProperty idProperty() {
         return id_book;
@@ -35,63 +33,23 @@ public class Book {
         this.id_book.set(id);
     }
 
-    public String getTitle() {
-        return title_book.get();
-    }
-
     public SimpleStringProperty titleProperty() {
         return title_book;
-    }
-
-    public void setTitle(String title) {
-        this.title_book.set(title);
-    }
-
-    public String getAuthorId() {
-        return author_book.get();
     }
 
     public SimpleStringProperty authorIdProperty() {
         return author_book;
     }
 
-    public void setAuthorId(String authorId) {
-        this.author_book.set(authorId);
-    }
-
-    public String getTypeBookId() {
-        return tb_book.get();
-    }
-
     public SimpleStringProperty typeBookIdProperty() {
         return tb_book;
-    }
-
-    public void setTypeBookId(String typeBookId) {
-        this.tb_book.set(typeBookId);
-    }
-
-    public int getQuantity() {
-        return quantity_book.get();
     }
 
     public SimpleIntegerProperty quantityProperty() {
         return quantity_book;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity_book.set(quantity);
-    }
-
-    public String getPhId() {
-        return ph_book.get();
-    }
-
     public SimpleStringProperty phIdProperty() {
         return ph_book;
-    }
-
-    public void setPhId(String phId) {
-        this.ph_book.set(phId);
     }
 }
