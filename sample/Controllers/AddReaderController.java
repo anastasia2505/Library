@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sample.DatabaseHandler;
 
@@ -31,6 +32,9 @@ public class AddReaderController {
     private Button update_reader_button;
 
     @FXML
+    private Label label_result;
+
+    @FXML
     void initialize() {
 
         add_reader_button.setOnAction(event ->{
@@ -43,7 +47,8 @@ public class AddReaderController {
                 Boolean ans_status = Boolean.valueOf(answer_status);
                 int ans_nticket = Integer.valueOf(answer_nticket_reader);
                 dbHandler.addReader(ans_status,ans_nticket);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
         });
 
         update_reader_button.setOnAction(event->{
@@ -59,7 +64,8 @@ public class AddReaderController {
                 int ans_nticket = Integer.valueOf(answer_nticket_reader);
                 int ans_id_reader = Integer.valueOf(answer_id_reader);
                 dbHandler.updateReader(ans_status,ans_nticket,ans_id_reader);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
 
         });
     }

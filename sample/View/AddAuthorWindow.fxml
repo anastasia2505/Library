@@ -45,6 +45,11 @@
                   <Font name="Baskerville Old Face" size="19.0" />
                </font>
             </Button>
+            <Label fx:id="label_result" alignment="TOP_CENTER" layoutX="123.0" layoutY="311.0" prefHeight="34.0" prefWidth="218.0">
+               <font>
+                  <Font name="Baskerville Old Face" size="31.0" />
+               </font>
+            </Label>
             </children></AnchorPane>
         <Label layoutX="142.0" prefHeight="72.0" prefWidth="166.0" text="Library">
             <font>

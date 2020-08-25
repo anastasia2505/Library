@@ -61,6 +61,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_book" alignment="TOP_CENTER" layoutX="38.0" layoutY="460.0" prefHeight="30.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -103,6 +108,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_TP" alignment="TOP_CENTER" layoutX="38.0" layoutY="458.0" prefHeight="30.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -154,6 +164,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_exbook" alignment="TOP_CENTER" layoutX="33.0" layoutY="455.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -197,6 +212,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_readers" alignment="TOP_CENTER" layoutX="33.0" layoutY="444.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -237,6 +257,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_rticket" alignment="TOP_CENTER" layoutX="33.0" layoutY="447.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -275,6 +300,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_occupation" alignment="TOP_CENTER" layoutX="41.0" layoutY="448.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -316,6 +346,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_lib" alignment="TOP_CENTER" layoutX="40.0" layoutY="448.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -357,6 +392,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_ph" alignment="TOP_CENTER" layoutX="33.0" layoutY="449.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>
@@ -401,6 +441,11 @@
                               <Font name="Baskerville Old Face" size="15.0" />
                            </font>
                         </Button>
+                        <Label fx:id="label_delete_author" alignment="TOP_CENTER" layoutX="33.0" layoutY="455.0" prefHeight="34.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Baskerville Old Face" size="23.0" />
+                           </font>
+                        </Label>
                      </children></AnchorPane>
             </content>
         </Tab>

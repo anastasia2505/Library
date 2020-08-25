@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sample.DatabaseHandler;
 
@@ -35,6 +36,9 @@ public class AddReaderTicketController {
     private Button update_rticket_button;
 
     @FXML
+    private Label label_result;
+
+    @FXML
     void initialize() {
         add_rticket_button.setOnAction(event ->{
 
@@ -48,7 +52,8 @@ public class AddReaderTicketController {
                 Date ans_date = Date.valueOf(answer_dateofbirth);
                 int ans_occup_id = Integer.valueOf(answer_type_occup);
                 dbHandler.addReaderTicket(answer_fname_reader,ans_date,ans_occup_id);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
         });
         update_rticket_button.setOnAction(event->{
             DatabaseHandler dbHandler = new DatabaseHandler();
@@ -64,7 +69,8 @@ public class AddReaderTicketController {
                 int ans_occup_id = Integer.valueOf(answer_type_occup);
                 int ans_id_rticket = Integer.valueOf(answer_id_rticket);
                 dbHandler.updateReaderTicket(answer_fname_reader,ans_date,ans_occup_id,ans_id_rticket);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
         });
 
     }

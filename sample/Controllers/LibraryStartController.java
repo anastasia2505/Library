@@ -11,11 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.DatabaseHandler;
@@ -70,6 +66,9 @@ public class LibraryStartController {
     private Button but_refresh_books;
 
     @FXML
+    private Label label_delete_book;
+
+    @FXML
     private Tab tab_tp_book;
 
     @FXML
@@ -98,6 +97,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_refresh_typebook;
+
+    @FXML
+    private Label label_delete_TP;
 
     @FXML
     private Tab tab_ex_of_books;
@@ -142,6 +144,9 @@ public class LibraryStartController {
     private Button but_refresh_exbook;
 
     @FXML
+    private Label label_delete_exbook;
+
+    @FXML
     private Tab tab_readers;
 
     @FXML
@@ -173,6 +178,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_refresh_readers;
+
+    @FXML
+    private Label label_delete_readers;
 
     @FXML
     private Tab tab_rtickets;
@@ -208,6 +216,9 @@ public class LibraryStartController {
     private Button but_refresh_rticket;
 
     @FXML
+    private Label label_delete_rticket;
+
+    @FXML
     private Tab tab_occup;
 
     @FXML
@@ -233,6 +244,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_refresh_occup;
+
+    @FXML
+    private Label label_delete_occupation;
 
     @FXML
     private Tab tab_libs;
@@ -271,6 +285,9 @@ public class LibraryStartController {
     private Button but_refresh_lib;
 
     @FXML
+    private Label label_delete_lib;
+
+    @FXML
     private Tab tab_ph;
 
     @FXML
@@ -307,6 +324,9 @@ public class LibraryStartController {
     private Button but_refresh_ph;
 
     @FXML
+    private Label label_delete_ph;
+
+    @FXML
     private Tab tab_authors;
 
     @FXML
@@ -341,6 +361,9 @@ public class LibraryStartController {
 
     @FXML
     private Button but_refresh_authors;
+
+    @FXML
+    private Label label_delete_author;
 
     public ObservableList<Book> listbook = FXCollections.observableArrayList();
     public ObservableList<TypeBook> listtypebook = FXCollections.observableArrayList();
@@ -541,55 +564,82 @@ public class LibraryStartController {
         but_delete_book.setOnAction(event ->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_book= textfield_id_book.getText().trim();
-            DBhandler.deleteBook(answer_delete_book);
+            if((!answer_delete_book.equals(""))){
+                DBhandler.deleteBook(answer_delete_book);
+                label_delete_book.setText("OK!");
+            } else label_delete_book.setText("Empty field!");
         });
 
         but_delete_type_book.setOnAction(event ->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_TP= textfield_idTP_delete.getText().trim();
-            DBhandler.deleteTypeBook(answer_delete_TP);
+            if((!answer_delete_TP.equals(""))){
+                DBhandler.deleteTypeBook(answer_delete_TP);
+                label_delete_TP.setText("OK!");
+            } else label_delete_TP.setText("Empty field!");
         });
 
         but_delete_example_book.setOnAction(event ->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_exbook= textField_id_exbook_delete.getText().trim();
-            DBhandler.deleteExampleBook(answer_delete_exbook);
+            if((!answer_delete_exbook.equals(""))){
+                DBhandler.deleteExampleBook(answer_delete_exbook);
+                label_delete_exbook.setText("OK!");
+            } else label_delete_exbook.setText("Empty field!");
         });
 
         but_delete_reader.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_reader= textfield_id_reader.getText().trim();
-            DBhandler.deleteReader(answer_delete_reader);
+            if((!answer_delete_reader.equals(""))){
+                DBhandler.deleteReader(answer_delete_reader);
+                label_delete_readers.setText("OK!");
+            } else label_delete_readers.setText("Empty field!");
         });
 
         but_delete_occupation.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_occupation = textfield_id_occupation.getText().trim();
-            DBhandler.deleteOccupation(answer_delete_occupation);
+            if((!answer_delete_occupation.equals(""))){
+                DBhandler.deleteOccupation(answer_delete_occupation);
+                label_delete_occupation.setText("OK!");
+            } else label_delete_occupation.setText("Empty field!");
         });
 
         but_delete_reader_ticket.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_rticket= textfield_id_rticket_delete.getText().trim();
-            DBhandler.deleteReaderTicket(answer_delete_rticket);
+            if((!answer_delete_rticket.equals(""))){
+                DBhandler.deleteReaderTicket(answer_delete_rticket);
+                label_delete_rticket.setText("OK!");
+            } else label_delete_rticket.setText("Empty field!");
         });
 
         but_delete_lib.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_lib = textfield_id_lib.getText().trim();
-            DBhandler.deleteLibrary(answer_delete_lib);
+            if((!answer_delete_lib.equals(""))){
+                DBhandler.deleteLibrary(answer_delete_lib);
+                label_delete_lib.setText("OK!");
+            } else label_delete_lib.setText("Empty field!");
         });
 
         but_delete_ph.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_ph = textfield_id_ph.getText().trim();
-            DBhandler.deletePublishingHouse(answer_delete_ph);
+            if((!answer_delete_ph.equals(""))){
+                DBhandler.deletePublishingHouse(answer_delete_ph);
+                label_delete_ph.setText("OK!");
+            } else label_delete_ph.setText("Empty field!");
         });
 
         but_delete_author.setOnAction(event->{
             DatabaseHandler DBhandler = new DatabaseHandler();
             String answer_delete_author = textfield_id_author.getText().trim();
-            DBhandler.deleteAuthor(answer_delete_author);
+            if((!answer_delete_author.equals(""))){
+                DBhandler.deleteAuthor(answer_delete_author);
+                label_delete_author.setText("OK!");
+            } else label_delete_author.setText("Empty field!");
         });
 
         // кнопки изменения записей в таблицах

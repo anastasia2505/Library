@@ -10,7 +10,7 @@
     <children>
         <AnchorPane layoutY="83.0" prefHeight="428.0" prefWidth="450.0" style="-fx-background-color: #DEB887;">
             <children>
-                <Button fx:id="add_ebook_button" layoutX="30.0" layoutY="325.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="177.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add example of book">
+                <Button fx:id="add_ebook_button" layoutX="25.0" layoutY="324.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="177.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add example of book">
                     <font>
                         <Font name="Baskerville Old Face" size="16.0" />
                     </font>
@@ -50,11 +50,16 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <Button fx:id="update_ebook_button" layoutX="224.0" layoutY="324.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update example of book">
+            <Button fx:id="update_ebook_button" layoutX="236.0" layoutY="323.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update example of book">
                <font>
                   <Font name="Baskerville Old Face" size="16.0" />
                </font>
             </Button>
+            <Label fx:id="label_result" alignment="TOP_CENTER" layoutX="115.0" layoutY="375.0" prefHeight="34.0" prefWidth="218.0">
+               <font>
+                  <Font name="Baskerville Old Face" size="32.0" />
+               </font>
+            </Label>
             </children></AnchorPane>
         <Label layoutX="142.0" prefHeight="72.0" prefWidth="166.0" text="Library">
             <font>

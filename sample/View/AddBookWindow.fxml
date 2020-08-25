@@ -55,6 +55,11 @@
                   <Font size="34.0" />
                </font>
             </Label>
+            <Label fx:id="label_result" alignment="TOP_CENTER" layoutX="115.0" layoutY="359.0" prefHeight="34.0" prefWidth="218.0">
+               <font>
+                  <Font name="Baskerville Old Face" size="36.0" />
+               </font>
+            </Label>
             </children></AnchorPane>
         <Label layoutX="142.0" prefHeight="72.0" prefWidth="166.0" text="Library">
             <font>

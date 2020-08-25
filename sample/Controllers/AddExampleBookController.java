@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sample.DatabaseHandler;
 
@@ -41,6 +42,9 @@ public class AddExampleBookController {
     private Button update_ebook_button;
 
     @FXML
+    private Label label_result;
+
+    @FXML
     void initialize() {
 
         add_ebook_button.setOnAction(event ->{
@@ -60,7 +64,8 @@ public class AddExampleBookController {
                 int ansBook = Integer.valueOf(answer_book);
                 int ansReader = Integer.valueOf(answer_reader);
                 dbHandler.addExampleBook(ansFlagg, ansDate, ansLib, ansBook, ansReader);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
 
         });
 
@@ -84,7 +89,8 @@ public class AddExampleBookController {
                 int ansReader = Integer.valueOf(answer_reader);
                 int ans_id_exbook = Integer.valueOf(answer_id_exbook);
                 dbHandler.updateExampleBook(ansFlagg, ansDate, ansLib, ansBook, ansReader,ans_id_exbook);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
         });
     }
 }

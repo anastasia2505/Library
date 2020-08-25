@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sample.DatabaseHandler;
 
@@ -41,6 +42,9 @@ public class AddBookController {
     private Button update_book_button;
 
     @FXML
+    private Label label_result;
+
+    @FXML
     void initialize() {
 
         add_book_button.setOnAction(event ->{
@@ -59,7 +63,8 @@ public class AddBookController {
                 int ansPH = Integer.valueOf(answer_ph);
                 int ansAuthor = Integer.valueOf(answer_author);
                 dbHandler.addBook(answer_title, ansQuantity, ansTPBOOK, ansPH, ansAuthor);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
         });
 
         update_book_button.setOnAction(event->{
@@ -81,7 +86,8 @@ public class AddBookController {
                 int ansPH = Integer.valueOf(answer_ph);
                 int ansAuthor = Integer.valueOf(answer_author);
                 dbHandler.updateBook(answer_title, ansQuantity, ansTPBOOK, ansPH, ansAuthor, ans_id_book);
-            } else System.out.println("Пустое поле ответа!");
+                label_result.setText("OK!");
+            } else label_result.setText("Empty fields!");
 
         });
 

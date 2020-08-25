@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="450.0" style="-fx-background-color: #A0522D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AddReaderController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="450.0" style="-fx-background-color: #A0522D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AddReaderController">
     <children>
-        <AnchorPane layoutY="77.0" prefHeight="289.0" prefWidth="450.0" style="-fx-background-color: #DEB887;">
+        <AnchorPane layoutY="77.0" prefHeight="306.0" prefWidth="450.0" style="-fx-background-color: #DEB887;">
             <children>
                 <Button fx:id="add_reader_button" layoutX="21.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Add reader">
                     <font>
@@ -30,7 +30,7 @@
                   <Font name="Baskerville Old Face" size="17.0" />
                </font>
             </TextField>
-            <Button fx:id="update_reader_button" layoutX="225.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update reader">
+            <Button fx:id="update_reader_button" layoutX="239.0" layoutY="205.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="186.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update reader">
                <font>
                   <Font name="Baskerville Old Face" size="17.0" />
                </font>
@@ -38,6 +38,11 @@
             <Label layoutX="65.0" layoutY="136.0" text="*">
                <font>
                   <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_result" alignment="TOP_CENTER" layoutX="116.0" layoutY="257.0" prefHeight="34.0" prefWidth="218.0">
+               <font>
+                  <Font name="Baskerville Old Face" size="35.0" />
                </font>
             </Label>
             </children></AnchorPane>

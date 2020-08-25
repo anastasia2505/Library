@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import sample.DatabaseHandler;
 
@@ -37,6 +38,9 @@ public class AddLibraryController {
     private Button update_library_button;
 
     @FXML
+    private Label label_result;
+
+    @FXML
     void initialize() {
       add_library_button.setOnAction(event ->{
           DatabaseHandler dbHandler = new DatabaseHandler();
@@ -49,7 +53,8 @@ public class AddLibraryController {
           if((!answer_lib_name.equals("")) && (!answer_lib_address.equals(""))&&(!answer_lib_email.equals(""))
                   && (!answer_lib_phone.equals(""))){
               dbHandler.addLibrary(answer_lib_name,answer_lib_address,answer_lib_email,answer_lib_phone);
-          } else System.out.println("Пустое поле ответа!");
+              label_result.setText("OK!");
+          } else label_result.setText("Empty fields!");
       });
 
       update_library_button.setOnAction(event->{
@@ -65,7 +70,8 @@ public class AddLibraryController {
                   && (!answer_lib_phone.equals(""))&& (!answer_id_lib.equals(""))){
               int ans_id_lib = Integer.valueOf(answer_id_lib);
               dbHandler.updateLibrary(answer_lib_name,answer_lib_address,answer_lib_email,answer_lib_phone,ans_id_lib);
-          } else System.out.println("Пустое поле ответа!");
+              label_result.setText("OK!");
+          } else label_result.setText("Empty fields!");
       });
     }
 }

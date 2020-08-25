@@ -20,7 +20,7 @@
                         <Font name="Baskerville Old Face" size="17.0" />
                     </font>
                 </TextField>
-            <Button fx:id="update_typebook_button" layoutX="206.0" layoutY="168.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update type book">
+            <Button fx:id="update_typebook_button" layoutX="215.0" layoutY="168.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #FFDEAD; -fx-background-radius: 5; -fx-border-color: #A0522D; -fx-border-radius: 5;" text="Update type book">
                <font>
                   <Font name="Baskerville Old Face" size="19.0" />
                </font>
@@ -33,6 +33,11 @@
             <Label layoutX="49.0" layoutY="94.0" text="*">
                <font>
                   <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="label_result" alignment="TOP_CENTER" layoutX="90.0" layoutY="219.0" prefHeight="34.0" prefWidth="218.0">
+               <font>
+                  <Font name="Baskerville Old Face" size="35.0" />
                </font>
             </Label>
             </children></AnchorPane>
